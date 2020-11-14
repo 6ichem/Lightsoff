@@ -1,38 +1,161 @@
-.App {
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+.Nav {
+  display: flex;
+  justify-content: center;
+}
+
+.TimeSelector {
+  margin-bottom: 15px;
+}
+
+.customNav {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contentlist {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.list {
+  list-style-type: none;
+  text-align: left;
+}
+
+.modal-container {
+  width: 50%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
+  height: auto !important;
 }
 
-.App-link {
-  color: #61dafb;
+.backdrop {
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.discover-slider {
+  height: 60vh !important;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.backdropText {
+  margin-left: 3%;
+  text-align: left;
+  margin-top: 22%;
+  width: 50%;
+}
+
+.chevron {
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+.slider-image {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 15px !important;
+}
+
+.search-input {
+  width: 25% !important;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.home-title {
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 50px;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.search-image {
+  margin-bottom: 15px !important;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.item:hover {
+  cursor: pointer;
+}
+
+.search-result:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+  .modal {
+    width: auto !important;
   }
-  to {
-    transform: rotate(360deg);
+  .backdropText {
+    margin-left: 10%;
+    width: 80%;
+  }
+  .search-input {
+    width: 80% !important;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 50px;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .modal {
+    width: auto;
+  }
+  .backdropText {
+    margin-left: 10%;
+    width: 80%;
+  }
+  .search-input {
+    width: 80% !important;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 50px;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .modal {
+    width: auto;
+  }
+  .backdropText {
+    margin-left: 10%;
+    width: 80%;
+  }
+  .search-input {
+    width: 80% !important;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 50px;
+    justify-content: center;
+    margin-bottom: 100px;
   }
 }
