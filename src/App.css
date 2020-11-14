@@ -159,3 +159,19 @@
     margin-bottom: 100px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(43, 43, 111);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(20, 20, 89);
+}
