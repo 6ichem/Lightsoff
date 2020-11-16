@@ -18,4 +18,5 @@ export default combineReducers({
   showTrailer: showReducer,
   showCast: showReducer,
   similarShows: showReducer,
+  trends: searchReducer,
 });

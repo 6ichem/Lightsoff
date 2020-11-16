@@ -1,7 +1,8 @@
-import { SEARCH } from "../types";
+import { SEARCH, GET_TRENDS } from "../types";
 
 const initialState = {
   results: [],
+  trends: [],
 };
 
 export default function searchReducer(state = initialState, action) {
@@ -10,6 +11,12 @@ export default function searchReducer(state = initialState, action) {
       return {
         ...state,
         results: action.payload,
+        loading: false,
+      };
+    case GET_TRENDS:
+      return {
+        ...state,
+        trends: action.payload,
         loading: false,
       };
     default:

@@ -12,6 +12,10 @@ class Navigation extends Component {
             <Nav.Item icon={<Icon icon='home' />}>Home</Nav.Item>
           </Link>
 
+          <Link to='/trends'>
+            <Nav.Item icon={<Icon icon='trend' />}>Trending</Nav.Item>
+          </Link>
+
           <Link to='/search'>
             <Nav.Item icon={<Icon icon='search' />}>Search</Nav.Item>
           </Link>

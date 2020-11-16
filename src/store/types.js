@@ -11,3 +11,4 @@ export const GET_SHOWS = "GET_SHOWS";
 export const GET_SHOWTRAILER = "GET_SHOWTRAILER";
 export const GET_SHOWCAST = "GET_SHOWCAST";
 export const GET_SIMILARSHOWS = "GET_SIMILARSHOWS";
+export const GET_TRENDS = "GET_TRENDS";

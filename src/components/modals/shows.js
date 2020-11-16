@@ -99,40 +99,30 @@ const ShowsModal = (props) => {
             {shows.seasons &&
               shows.seasons.map((s) => (
                 <div className='contentlist'>
-                  {s.poster_path === null ? (
-                    <img
-                      src='https://via.placeholder.com/154'
-                      width='154'
-                      height='231'
-                      alt=''
-                      style={{ marginBottom: "5px" }}
-                    />
-                  ) : (
-                    <img
-                      src={image + s.poster_path}
-                      alt=''
-                      style={{ marginBottom: "5px" }}
-                    />
-                  )}
-                  <ul className='list'>
-                    <li>
-                      <h6>{s.name}</h6>
-                    </li>
-                    <li>
-                      <span className='bold'>Air date:</span> {s.air_date}
-                    </li>
-                    <li>
-                      <span className='bold'>Episodes count:</span>{" "}
-                      {s.episode_count}
-                    </li>
-                    <li>
-                      <span className='bold'>Season number:</span>{" "}
-                      {s.season_number}
-                    </li>
-                    <li>
-                      <span className='bold'>Overview:</span> {s.overview}
-                    </li>
-                  </ul>
+                  <div>
+                    {s.poster_path === null ? (
+                      <img
+                        src='https://via.placeholder.com/154'
+                        className='responsive-image'
+                        alt=''
+                      />
+                    ) : (
+                      <img
+                        src={image + s.poster_path}
+                        className='responsive-image'
+                        alt=''
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <h6>{s.name}</h6>
+                    <span className='bold'>Air date:</span> {s.air_date} <br />
+                    <span className='bold'>Episodes count:</span>{" "}
+                    {s.episode_count} <br />
+                    <span className='bold'>Season number:</span>{" "}
+                    {s.season_number} <br />
+                    <span className='bold'>Overview:</span> {s.overview}
+                  </div>
                 </div>
               ))}
           </Panel>
