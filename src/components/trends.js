@@ -16,16 +16,17 @@ const Trends = (props) => {
 
   const [movies, setMovies] = useState(false);
   const [shows, setShows] = useState(false);
-  const [showingid, setid] = useState();
+  const [movieID, setMovieID] = useState();
+  const [showID, setShowID] = useState();
 
   function openMovies(id) {
     setMovies(true);
-    setid(id);
+    setMovieID(id);
   }
 
   function openShows(id) {
     setShows(true);
-    setid(id);
+    setShowID(id);
   }
 
   useEffect(() => {
@@ -36,15 +37,13 @@ const Trends = (props) => {
 
   const image = `https://image.tmdb.org/t/p/w154`;
 
-  console.log(trends);
-
   return (
     <div>
       <FlexboxGrid justify='center'>
         <Panel header='Whats trending this week?' shaded>
           {trends.results &&
             trends.results.map((t) => (
-              <div className='contentlist trendslist'>
+              <div className='contentlist trendslist' key={t.id}>
                 <div>
                   {t.poster_path === null ? (
                     <img
@@ -106,7 +105,7 @@ const Trends = (props) => {
         hide={() => {
           setMovies(false);
         }}
-        id={showingid}
+        id={movieID}
       />
 
       <ShowsModal
@@ -114,7 +113,7 @@ const Trends = (props) => {
         hide={() => {
           setShows(false);
         }}
-        id={showingid}
+        id={showID}
       />
     </div>
   );

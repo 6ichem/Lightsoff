@@ -55,7 +55,6 @@ const ShowsModal = (props) => {
           <img
             src={backdrop + shows.backdrop_path}
             alt=''
-            srcset=''
             className='backdrop'
           />
           {shows.genres &&
@@ -63,6 +62,7 @@ const ShowsModal = (props) => {
               <Badge
                 content={genre.name}
                 style={{ marginRight: "5px", marginBottom: "5px" }}
+                key={genre.id}
               />
             ))}
           <Badge content={"★   " + shows.vote_average} />
@@ -82,7 +82,7 @@ const ShowsModal = (props) => {
                       width='100%'
                       height='315'
                       src={youtube + t.key}
-                      frameborder='0'
+                      frameBorder='0'
                       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                       title='Trailer'
                       allowFullScreen></iframe>
@@ -98,7 +98,7 @@ const ShowsModal = (props) => {
             bordered>
             {shows.seasons &&
               shows.seasons.map((s) => (
-                <div className='contentlist'>
+                <div className='contentlist' key={s.id}>
                   <div>
                     {s.poster_path === null ? (
                       <img

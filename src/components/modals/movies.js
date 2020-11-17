@@ -41,7 +41,7 @@ const MoviesModal = (props) => {
   const image = `https://image.tmdb.org/t/p/w154`;
 
   return (
-    <div className='modal-container'>
+    <div className='modal-container' key={movie.id}>
       <Modal
         show={props.show}
         onHide={props.hide}
@@ -55,7 +55,6 @@ const MoviesModal = (props) => {
           <img
             src={backdrop + movie.backdrop_path}
             alt=''
-            srcset=''
             className='backdrop'
           />
           {movie.genres &&
@@ -63,6 +62,7 @@ const MoviesModal = (props) => {
               <Badge
                 content={genre.name}
                 style={{ marginRight: "5px", marginBottom: "5px" }}
+                key={genre.id}
               />
             ))}
           <Badge content={"★   " + movie.vote_average} />
@@ -82,7 +82,7 @@ const MoviesModal = (props) => {
                       width='100%'
                       height='315'
                       src={youtube + t.key}
-                      frameborder='0'
+                      frameBorder='0'
                       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                       title='Trailer'
                       allowFullScreen></iframe>

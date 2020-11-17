@@ -20,16 +20,17 @@ const Search = (props) => {
 
   const [movies, setMovies] = useState(false);
   const [shows, setShows] = useState(false);
-  const [showingid, setid] = useState();
+  const [movieID, setMovieID] = useState();
+  const [showID, setShowID] = useState();
 
   function openMovies(id) {
     setMovies(true);
-    setid(id);
+    setMovieID(id);
   }
 
   function openShows(id) {
     setShows(true);
-    setid(id);
+    setShowID(id);
   }
 
   const image = `https://image.tmdb.org/t/p/w154`;
@@ -54,6 +55,7 @@ const Search = (props) => {
             r.poster_path ? (
               <div
                 className='search-result'
+                key={r.id}
                 onClick={
                   {
                     movie: () => openMovies(r.id),
@@ -82,7 +84,7 @@ const Search = (props) => {
         hide={() => {
           setMovies(false);
         }}
-        id={showingid}
+        id={movieID}
       />
 
       <ShowsModal
@@ -90,7 +92,7 @@ const Search = (props) => {
         hide={() => {
           setShows(false);
         }}
-        id={showingid}
+        id={showID}
       />
     </div>
   );

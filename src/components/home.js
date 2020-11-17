@@ -50,16 +50,17 @@ const Discover = (props) => {
 
   const [movies, setMovies] = useState(false);
   const [shows, setShows] = useState(false);
-  const [showingid, setid] = useState();
+  const [movieID, setMovieID] = useState();
+  const [showID, setShowID] = useState();
 
   function openMovies(id) {
     setMovies(true);
-    setid(id);
+    setMovieID(id);
   }
 
   function openShows(id) {
     setShows(true);
-    setid(id);
+    setShowID(id);
   }
 
   return (
@@ -117,7 +118,7 @@ const Discover = (props) => {
           hide={() => {
             setMovies(false);
           }}
-          id={showingid}
+          id={movieID}
         />
       </div>
 
@@ -152,7 +153,7 @@ const Discover = (props) => {
           hide={() => {
             setShows(false);
           }}
-          id={showingid}
+          id={showID}
         />
       </div>
 
@@ -187,7 +188,7 @@ const Discover = (props) => {
           hide={() => {
             setMovies(false);
           }}
-          id={showingid}
+          id={movieID}
         />
       </div>
 
@@ -222,7 +223,7 @@ const Discover = (props) => {
           hide={() => {
             setShows(false);
           }}
-          id={showingid}
+          id={showID}
         />
       </div>
     </div>
